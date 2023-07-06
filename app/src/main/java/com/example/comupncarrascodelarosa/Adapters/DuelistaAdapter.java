@@ -50,7 +50,7 @@ public class DuelistaAdapter extends RecyclerView.Adapter {
 
         View view = holder.itemView;
 
-        TextView tvNombreDuelista = view.findViewById(R.id.txtNombreDuelista);
+        TextView tvNombreDuelista = view.findViewById(R.id.txtNombreDuelistaLista);
 
 
         tvNombreDuelista.setText(item.getNombre());

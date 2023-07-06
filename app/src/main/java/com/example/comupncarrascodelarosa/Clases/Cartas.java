@@ -34,9 +34,9 @@ public class Cartas {
         this.id = id;
     }
 
-    public String getTipo() { return nombre;}
+    public String getNombre() { return nombre;}
 
-    public void setTipo(String tipo) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 

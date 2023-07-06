@@ -26,8 +26,8 @@ public class RegistroDuelista extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_duelista);
 
-        EditText etNombreDuelista = findViewById(R.id.etNombreDuelista);
-        Button btnRegistrado = findViewById(R.id.btnRegistrado);
+        EditText etNombreDuelista = findViewById(R.id.etNombreCartas);
+        Button btnRegistrado = findViewById(R.id.btnRegistradoCartas);
 
 
         dRetrofit = RetrofitU.build();

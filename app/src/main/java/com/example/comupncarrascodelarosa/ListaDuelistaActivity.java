@@ -49,7 +49,7 @@ public class ListaDuelistaActivity extends AppCompatActivity {
         Button btnActualizar = findViewById(R.id.btnActualizarD);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        mRvLista =  findViewById(R.id.rvListaDuelista);
+        mRvLista =  findViewById(R.id.rvListaCartas);
         mRvLista.setLayoutManager(layoutManager);
         mRvLista.setAdapter(dAdapter);
 

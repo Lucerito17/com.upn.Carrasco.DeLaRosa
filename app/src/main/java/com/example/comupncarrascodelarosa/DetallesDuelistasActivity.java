@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.comupncarrascodelarosa.BD.AppDatabase;
+import com.example.comupncarrascodelarosa.Clases.Duelistas;
+import com.example.comupncarrascodelarosa.Repositories.DuelistaRepository;
+
 public class DetallesDuelistasActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +22,12 @@ public class DetallesDuelistasActivity extends AppCompatActivity {
         Button BtnVerCartas = findViewById(R.id.BtnVerCartas);
         Button BtnRegistrarCartas = findViewById(R.id.BtnRegistrarCartas);
 
-        //tvNombreDuelista.setText(etNombreDuelista);
+        int position = getIntent().getIntExtra("position", 0);
+
+        AppDatabase db = AppDatabase.getInstance(this);
+        DuelistaRepository repository = db.duelistaRepository();
+        Duelistas duelistas = repository.findDuelistaById(position);
+        tvNombreDuelista.setText(duelistas.getNombre());
 
         BtnVerCartas.setOnClickListener(new View.OnClickListener() {
             @Override

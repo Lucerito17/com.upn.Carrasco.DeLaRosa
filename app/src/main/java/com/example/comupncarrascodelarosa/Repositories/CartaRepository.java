@@ -1,4 +1,30 @@
 package com.example.comupncarrascodelarosa.Repositories;
 
+import androidx.room.Dao;
+import androidx.room.Insert;
+import androidx.room.Query;
+
+import com.example.comupncarrascodelarosa.Clases.Cartas;
+import com.example.comupncarrascodelarosa.Clases.Duelistas;
+
+import java.util.List;
+
+@Dao
 public interface CartaRepository {
+    @Query("SELECT * FROM cartas")
+    List<Cartas> getAll();
+    @Insert
+    void create(Cartas cartas);
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertAll(List<Cartas> movimientos);
+
+    @Query("SELECT * FROM Cartas WHERE sincro = 0")
+    List<Cartas> getUnsyncedCarta();
+
+    @Update
+    void updateCarta(Cartas cartas);
+
+    @Query("SELECT * FROM Cartas WHERE idDuelista = :idDuelista")
+    List<Cartas> getCartaDuelista(int idDuelista);
 }

@@ -4,26 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RegistroDuelista">
 
-    <Button
-        android:id="@+id/btnRegistrarDuelista"
+    <EditText
+        android:id="@+id/etNombreDuelista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registrar"
-        app:layout_constraintBottom_toTopOf="@+id/btnListaDuelista"
+        android:layout_marginTop="176dp"
+        android:hint="Ingrese Nombre"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.632" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnListaDuelista"
+        android:id="@+id/btnRegistrado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="268dp"
-        android:text="Lista de Duelistas"
+        android:layout_marginBottom="264dp"
+        android:text="Duelista Registrado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

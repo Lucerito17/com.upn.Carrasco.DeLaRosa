@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ComupnCarrascoDeLaRosa"
         tools:targetApi="31">
         <activity
+            android:name=".DetallesCartasActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegistroCartas"
             android:exported="false" />
         <activity

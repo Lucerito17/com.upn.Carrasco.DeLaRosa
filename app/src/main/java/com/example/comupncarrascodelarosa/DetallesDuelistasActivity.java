@@ -21,6 +21,7 @@ public class DetallesDuelistasActivity extends AppCompatActivity {
         TextView tvNombreDuelista = findViewById(R.id.tvNombreDuelista);
         Button BtnVerCartas = findViewById(R.id.BtnVerCartas);
         Button BtnRegistrarCartas = findViewById(R.id.BtnRegistrarCartas);
+        Button BtnSincro = findViewById(R.id.BtnSincro);
 
         int position = getIntent().getIntExtra("position", 0);
 

@@ -29,4 +29,9 @@ public interface CartaRepository {
 
     @Query("SELECT * FROM Cartas WHERE idDuelista = :idDuelista")
     List<Cartas> getCartaDuelista(int idDuelista);
+
+    @Query("SELECT MAX(id) FROM Cartas")
+    int getLastId();
+    @Query("SELECT * FROM Cartas WHERE id = :cartasId")
+    Cartas findCartaById(int cartasId);
 }
